@@ -186,7 +186,7 @@ async function updateDiscordActivity() {
   const largeImageKey = isPause
     ? "bw-exploring-bordered-white"
     : cursonginfo.songcover;
-  const largeImageText = isPause ? "PAUSED ^_^" : "";
+  const largeImageText = isPause ? "Exploring SoundCloud" : "";
 
   const ts = calcTimestamps(
     cursonginfo.songcurrentdur,
@@ -195,10 +195,12 @@ async function updateDiscordActivity() {
 
   const activity = {
     type: ActivityType.Listening,
-    details: isPause ? "MADE BY WEBPRINCE" : `${title}`,
+    details: isPause ? "BetterSoundCloud" : `${title}`,
     state: isPause ? `At ${userviewpage}` : `${artist}`,
     largeImageKey,
-    largeImageText,,
+    largeImageText,
+    smallImageKey: "bw-icon-bordered-white",
+    smallImageText: `V${clientVersion}`,
     instance: false,
     startTimestamp: startingTimestamp,
     statusDisplayType: StatusDisplayType.DETAILS,
