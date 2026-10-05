@@ -10,7 +10,7 @@ const path = require("path");
 const { Client, StatusDisplayType } = require("@xhayper/discord-rpc");
 const { ActivityType } = require("discord-api-types/v10");
 const client = new Client({
-  clientId: "1054636117284106270", // Discord App Client ID
+  clientId: "1556468641619378247", // Discord App Client ID
 });
 
 const clientVersion = packagefile.version;
@@ -186,7 +186,7 @@ async function updateDiscordActivity() {
   const largeImageKey = isPause
     ? "bw-exploring-bordered-white"
     : cursonginfo.songcover;
-  const largeImageText = isPause ? "Exploring SoundCloud" : "";
+  const largeImageText = isPause ? "PAUSED ^_^" : "";
 
   const ts = calcTimestamps(
     cursonginfo.songcurrentdur,
@@ -195,12 +195,10 @@ async function updateDiscordActivity() {
 
   const activity = {
     type: ActivityType.Listening,
-    details: isPause ? "BetterSoundCloud" : `${title}`,
+    details: isPause ? "MADE BY WEBPRINCE" : `${title}`,
     state: isPause ? `At ${userviewpage}` : `${artist}`,
     largeImageKey,
-    largeImageText,
-    smallImageKey: "bw-icon-bordered-white",
-    smallImageText: `V${clientVersion}`,
+    largeImageText,,
     instance: false,
     startTimestamp: startingTimestamp,
     statusDisplayType: StatusDisplayType.DETAILS,
