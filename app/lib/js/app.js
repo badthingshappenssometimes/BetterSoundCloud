@@ -10,7 +10,7 @@ const path = require("path");
 const { Client, StatusDisplayType } = require("@xhayper/discord-rpc");
 const { ActivityType } = require("discord-api-types/v10");
 const client = new Client({
-  clientId: "1556476275571298344", // Discord App Client ID
+  clientId: "1556477091279536140", // Discord App Client ID
 });
 
 const clientVersion = packagefile.version;
@@ -173,10 +173,10 @@ webview.addEventListener("console-message", (e) => {
 async function updateDiscordActivity() {
   if (!client) return;
 
-  let userviewpage = "Discover";
+  let userviewpage = "Waiting for song >_<";
   try {
     const url = new URL(webview.getURL());
-    userviewpage = url.pathname.split("/")[1] || "Discover";
+    userviewpage = url.pathname.split("/")[1] || "Waiting for song >_<";
   } catch {}
 
   const isPause = cursonginfo.songstate === "paused";
@@ -195,7 +195,7 @@ async function updateDiscordActivity() {
 
   const activity = {
     type: ActivityType.Listening,
-    details: isPause ? "music ^_^" : `${title}`,
+    details: isPause ? "MADE BY WEBPRINCE (*^.^*)" : `${title}`,
     state: isPause ? `At ${userviewpage}` : `${artist}`,
     largeImageKey,
     largeImageText,
