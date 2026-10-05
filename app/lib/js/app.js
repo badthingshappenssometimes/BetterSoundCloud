@@ -196,7 +196,7 @@ async function updateDiscordActivity() {
   const activity = {
     type: ActivityType.Listening,
     details: isPause ? "MADE BY WEBPRINCE (*^.^*)" : `${title}`,
-    state: isPause ? `At ${userviewpage}` : `${artist}`,
+    state: isPause ? `Waiting for song >_<` : `${artist}`,
     largeImageKey,
     largeImageText,
     smallImageKey: "bw-icon-bordered-white",
