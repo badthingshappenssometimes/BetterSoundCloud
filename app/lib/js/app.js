@@ -186,7 +186,7 @@ async function updateDiscordActivity() {
   const largeImageKey = isPause
     ? "bw-exploring-bordered-white"
     : cursonginfo.songcover;
-  const largeImageText = isPause ? "Exploring SoundCloud" : "";
+  const largeImageText = isPause ? "PAUSED ^_^" : "";
 
   const ts = calcTimestamps(
     cursonginfo.songcurrentdur,
@@ -195,7 +195,7 @@ async function updateDiscordActivity() {
 
   const activity = {
     type: ActivityType.Listening,
-    details: isPause ? "BetterSoundCloud" : `${title}`,
+    details: isPause ? "music ^_^" : `${title}`,
     state: isPause ? `At ${userviewpage}` : `${artist}`,
     largeImageKey,
     largeImageText,
