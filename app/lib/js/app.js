@@ -10,7 +10,7 @@ const path = require("path");
 const { Client, StatusDisplayType } = require("@xhayper/discord-rpc");
 const { ActivityType } = require("discord-api-types/v10");
 const client = new Client({
-  clientId: "1556468641619378247", // Discord App Client ID
+  clientId: "1556476275571298344", // Discord App Client ID
 });
 
 const clientVersion = packagefile.version;
